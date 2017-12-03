@@ -1,0 +1,14 @@
+D:\14.7\ISE_DS\5-Example\hz\hz_top.ngc 1512320966
+D:\14.7\ISE_DS\5-Example\hz/hz.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_rs232_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_proc_sys_reset_0_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_clock_generator_0_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_microblaze_0_ilmb_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_microblaze_0_dlmb_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_axi4lite_0_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_microblaze_0_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_microblaze_0_i_bram_ctrl_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_microblaze_0_d_bram_ctrl_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_debug_module_wrapper.ngc 1512320953
+D:\14.7\ISE_DS\5-Example\hz/hz_microblaze_0_bram_block_wrapper.ngc 1512320953
+OK

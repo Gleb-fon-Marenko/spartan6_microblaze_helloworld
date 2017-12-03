@@ -1,0 +1,13 @@
+-p
+xc6slx9tqg144-3
+-lang
+verilog
+-intstyle
+ise
+-toplevel
+no
+-ti
+hz_i
+-msg
+__xps/ise/xmsgprops.lst
+hz.mhs

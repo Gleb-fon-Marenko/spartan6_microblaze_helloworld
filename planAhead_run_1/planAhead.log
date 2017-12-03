@@ -1,0 +1,369 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Dec 03 20:09:33 2017
+# Process ID: 4288
+# Log file: D:/14.7/ISE_DS/5-Example/hz/planAhead_run_1/planAhead.log
+# Journal file: D:/14.7/ISE_DS/5-Example/hz/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/14.7/ISE_DS/5-Example/hz/pa.fromNetlist.tcl
+# create_project -name hz -dir "D:/14.7/ISE_DS/5-Example/hz/planAhead_run_1" -part xc6slx9tqg144-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/14.7/ISE_DS/5-Example/hz/hz_top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/14.7/ISE_DS/5-Example/hz} }
+# add_files [list {D:/14.7/ISE_DS/5-Example/hz/hz.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {D:/14.7/ISE_DS/5-Example/hz/hz_axi4lite_0_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {D:/14.7/ISE_DS/5-Example/hz/hz_clock_generator_0_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_dlmb_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_ilmb_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_wrapper.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "hz_top.ucf" [current_fileset -constrset]
+Adding file 'D:/14.7/ISE_DS/5-Example/hz/hz_top.ucf' to fileset 'constrs_1'
+# add_files [list {hz_top.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx9tqg144-3
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to hz_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz_top.edif ...
+ngc2edif: Total memory usage is 79612 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_top_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_top_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz.ngc ...
+WARNING:NetListWriters:298 - No output is written to hz.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz.edif ...
+ngc2edif: Total memory usage is 87548 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz.ngc' for (cell view 'hz', library 'hz_top_lib', file 'hz_top.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_rs232_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to hz_rs232_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus RS232/bus2ip_rdce<3 : 1> on block
+   hz_rs232_wrapper is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file hz_rs232_wrapper.edif ...
+ngc2edif: Total memory usage is 79356 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_rs232_wrapper.ngc' for (cell view 'hz_rs232_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_rs232_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_rs232_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_proc_sys_reset_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_proc_sys_reset_0_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus proc_sys_reset_0/SEQ/pr_dec<2 : 0> on
+   block hz_proc_sys_reset_0_wrapper is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus proc_sys_reset_0/SEQ/bsr_dec<2 : 0> on
+   block hz_proc_sys_reset_0_wrapper is not reconstructed, because there are
+   some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file hz_proc_sys_reset_0_wrapper.edif ...
+ngc2edif: Total memory usage is 79356 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_proc_sys_reset_0_wrapper.ngc' for (cell view 'hz_proc_sys_reset_0_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_proc_sys_reset_0_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_proc_sys_reset_0_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_clock_generator_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_clock_generator_0_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz_clock_generator_0_wrapper.edif ...
+ngc2edif: Total memory usage is 79356 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_clock_generator_0_wrapper.ngc' for (cell view 'hz_clock_generator_0_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_clock_generator_0_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_clock_generator_0_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_microblaze_0_ilmb_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_microblaze_0_ilmb_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz_microblaze_0_ilmb_wrapper.edif ...
+ngc2edif: Total memory usage is 79356 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_ilmb_wrapper.ngc' for (cell view 'hz_microblaze_0_ilmb_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_ilmb_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_ilmb_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_microblaze_0_dlmb_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_microblaze_0_dlmb_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz_microblaze_0_dlmb_wrapper.edif ...
+ngc2edif: Total memory usage is 79676 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_dlmb_wrapper.ngc' for (cell view 'hz_microblaze_0_dlmb_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_dlmb_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_dlmb_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_axi4lite_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to hz_axi4lite_0_wrapper.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_i
+   nst/m_amesg_i[48 : 1] on block hz_axi4lite_0_wrapper is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/n0268[2 : 0] on block
+   hz_axi4lite_0_wrapper is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_i
+   nst/s_amesg[48 : 1] on block hz_axi4lite_0_wrapper is not reconstructed,
+   because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file hz_axi4lite_0_wrapper.edif ...
+ngc2edif: Total memory usage is 81084 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_axi4lite_0_wrapper.ngc' for (cell view 'hz_axi4lite_0_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_axi4lite_0_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_axi4lite_0_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_microblaze_0_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_microblaze_0_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_
+   Perf/control_reg<8 : 0> on block hz_microblaze_0_wrapper is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus microblaze_0/LOCKSTEP_Out<3817 : 0> on
+   block hz_microblaze_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.mem_MSR<28 : 0> on block
+   hz_microblaze_0_wrapper is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.ex_MSR<30 : 0> on block
+   hz_microblaze_0_wrapper is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_PipeRun_carry<9 : 1>
+   on block hz_microblaze_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/of_pipe_ctrl<10 : 2> on
+   block hz_microblaze_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_
+   FPGA_Buffers_Mux.buffer_or_new<32 : 0> on block hz_microblaze_0_wrapper is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/Using_
+   FPGA_Buffers_Mux.srl16<42 : 0> on block hz_microblaze_0_wrapper is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_
+   Perf/Detect_Commands.sample<6 : 0> on block hz_microblaze_0_wrapper is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_
+   Perf/status_reg<27 : 0> on block hz_microblaze_0_wrapper is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_
+   Perf/Use_SRL16.tdo_config_word1<15 : 0> on block hz_microblaze_0_wrapper is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/n0084<30 : 0> on block
+   hz_microblaze_0_wrapper is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/mem_fwd<30 : 0> on
+   block hz_microblaze_0_wrapper is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/wb_MSR_cmb<3
+   0 : 28> on block hz_microblaze_0_wrapper is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/of_MSR_i<31
+   : 17> on block hz_microblaze_0_wrapper is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/ex_MSR_i<31
+   : 17> on block hz_microblaze_0_wrapper is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/msr_reg_i/mem_MSR_i<31
+   : 17> on block hz_microblaze_0_wrapper is not reconstructed, because there
+   are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file hz_microblaze_0_wrapper.edif ...
+ngc2edif: Total memory usage is 91900 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_wrapper.ngc' for (cell view 'hz_microblaze_0_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_microblaze_0_i_bram_ctrl_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_microblaze_0_i_bram_ctrl_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz_microblaze_0_i_bram_ctrl_wrapper.edif ...
+ngc2edif: Total memory usage is 79356 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_i_bram_ctrl_wrapper.ngc' for (cell view 'hz_microblaze_0_i_bram_ctrl_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_i_bram_ctrl_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_i_bram_ctrl_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_microblaze_0_d_bram_ctrl_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_microblaze_0_d_bram_ctrl_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz_microblaze_0_d_bram_ctrl_wrapper.edif ...
+ngc2edif: Total memory usage is 79804 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_d_bram_ctrl_wrapper.ngc' for (cell view 'hz_microblaze_0_d_bram_ctrl_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_d_bram_ctrl_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_d_bram_ctrl_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_debug_module_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_debug_module_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus debug_module/MDM_Core_I1/Config_Reg<31 :
+   1> on block hz_debug_module_wrapper is not reconstructed, because there are
+   some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file hz_debug_module_wrapper.edif ...
+ngc2edif: Total memory usage is 79356 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_debug_module_wrapper.ngc' for (cell view 'hz_debug_module_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_debug_module_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_debug_module_wrapper_ngc_zx.edif]
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design hz_microblaze_0_bram_block_wrapper.ngc ...
+WARNING:NetListWriters:298 - No output is written to
+   hz_microblaze_0_bram_block_wrapper.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file hz_microblaze_0_bram_block_wrapper.edif ...
+ngc2edif: Total memory usage is 78652 kilobytes
+
+Reading core file 'D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_bram_block_wrapper.ngc' for (cell view 'hz_microblaze_0_bram_block_wrapper', library 'hz_lib', file 'hz.ngc')
+Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_bram_block_wrapper_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/hz.data/cache/hz_microblaze_0_bram_block_wrapper_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 112 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from D:/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from D:/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from D:/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from D:/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from D:/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : D:/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz.ncf]
+Finished Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz.ncf]
+Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_axi4lite_0_wrapper.ncf]
+Finished Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_axi4lite_0_wrapper.ncf]
+Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_clock_generator_0_wrapper.ncf]
+Finished Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_clock_generator_0_wrapper.ncf]
+Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_dlmb_wrapper.ncf]
+Finished Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_dlmb_wrapper.ncf]
+Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_ilmb_wrapper.ncf]
+Finished Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_ilmb_wrapper.ncf]
+Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_wrapper.ncf]
+Finished Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_microblaze_0_wrapper.ncf]
+Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_top.ucf]
+Finished Parsing UCF File [D:/14.7/ISE_DS/5-Example/hz/hz_top.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 112 instances were transformed.
+  LUT6_2 => LUT6_2 (LUT6, LUT5): 96 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+Phase 0 | Netlist Checksum: 0d22fe2b
+link_design: Time (s): elapsed = 00:00:21 . Memory (MB): peak = 740.242 ; gain = 190.590
+startgroup
+set_property package_pin P17 [get_ports RESET]
+endgroup
+startgroup
+set_property package_pin P14 [get_ports RS232_Uart_1_sin]
+endgroup
+startgroup
+set_property package_pin P12 [get_ports RS232_Uart_1_sout]
+endgroup
+save_constraints
+startgroup
+set_property package_pin P56 [get_ports CLK_P]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See D:/14.7/ISE_DS/5-Example/hz\planAhead_pid4288.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sun Dec 03 20:11:19 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,7 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "RESET" LOC = P17;
+NET "RS232_Uart_1_sin" LOC = P14;
+NET "RS232_Uart_1_sout" LOC = P12;
+NET "CLK_P" LOC = P56;

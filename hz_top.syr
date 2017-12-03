@@ -1,0 +1,669 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: hz_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "hz_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "hz_top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : hz_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:/14.7/ISE_DS/5-Example/hz/hz/hdl/hz.v" into library work
+Parsing module <hz>.
+Parsing module <hz_proc_sys_reset_0_wrapper>.
+Parsing module <hz_microblaze_0_ilmb_wrapper>.
+Parsing module <hz_microblaze_0_i_bram_ctrl_wrapper>.
+Parsing module <hz_microblaze_0_dlmb_wrapper>.
+Parsing module <hz_microblaze_0_d_bram_ctrl_wrapper>.
+Parsing module <hz_microblaze_0_bram_block_wrapper>.
+Parsing module <hz_microblaze_0_wrapper>.
+Parsing module <hz_debug_module_wrapper>.
+Parsing module <hz_clock_generator_0_wrapper>.
+Parsing module <hz_axi4lite_0_wrapper>.
+Parsing module <hz_rs232_wrapper>.
+Analyzing Verilog file "D:\14.7\ISE_DS\5-Example\hz\hz\hz_top.v" into library work
+Parsing module <hz_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <hz_top>.
+
+Elaborating module <hz>.
+WARNING:HDLCompiler:1499 - "D:/14.7/ISE_DS/5-Example/hz/hz/hdl/hz.v" Line 5: Empty module <hz> remains a black box.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <hz_top>.
+    Related source file is "D:\14.7\ISE_DS\5-Example\hz\hz\hz_top.v".
+    Set property "BOX_TYPE = user_black_box" for instance <hz_i>.
+    Summary:
+	no macro.
+Unit <hz_top> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <hz.ngc>.
+Reading core <hz_rs232_wrapper.ngc>.
+Reading core <hz_proc_sys_reset_0_wrapper.ngc>.
+Reading core <hz_clock_generator_0_wrapper.ngc>.
+Reading core <hz_microblaze_0_ilmb_wrapper.ngc>.
+Reading core <hz_microblaze_0_dlmb_wrapper.ngc>.
+Reading core <hz_axi4lite_0_wrapper.ngc>.
+Reading core <hz_microblaze_0_wrapper.ngc>.
+Reading core <hz_microblaze_0_i_bram_ctrl_wrapper.ngc>.
+Reading core <hz_microblaze_0_d_bram_ctrl_wrapper.ngc>.
+Reading core <hz_debug_module_wrapper.ngc>.
+Reading core <hz_microblaze_0_bram_block_wrapper.ngc>.
+Loading core <hz_rs232_wrapper> for timing and area information for instance <RS232>.
+Loading core <hz_proc_sys_reset_0_wrapper> for timing and area information for instance <proc_sys_reset_0>.
+Loading core <hz_clock_generator_0_wrapper> for timing and area information for instance <clock_generator_0>.
+Loading core <hz_microblaze_0_ilmb_wrapper> for timing and area information for instance <microblaze_0_ilmb>.
+Loading core <hz_microblaze_0_dlmb_wrapper> for timing and area information for instance <microblaze_0_dlmb>.
+Loading core <hz_axi4lite_0_wrapper> for timing and area information for instance <axi4lite_0>.
+Loading core <hz_microblaze_0_wrapper> for timing and area information for instance <microblaze_0>.
+Loading core <hz_microblaze_0_i_bram_ctrl_wrapper> for timing and area information for instance <microblaze_0_i_bram_ctrl>.
+Loading core <hz_microblaze_0_d_bram_ctrl_wrapper> for timing and area information for instance <microblaze_0_d_bram_ctrl>.
+Loading core <hz_debug_module_wrapper> for timing and area information for instance <debug_module>.
+Loading core <hz_microblaze_0_bram_block_wrapper> for timing and area information for instance <microblaze_0_bram_block>.
+Loading core <hz> for timing and area information for instance <hz_i>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <hz_top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block hz_top, actual ratio is 14.
+INFO:Xst:2260 - The FF/Latch <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <RS232> is equivalent to the following FF/Latch : <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following 2 FFs/Latches : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_2> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following 2 FFs/Latches : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28> in Unit <microblaze_0> is equivalent to the following 2 FFs/Latches : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_1> <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc_1> 
+INFO:Xst:2260 - The FF/Latch <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <RS232> is equivalent to the following FF/Latch : <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following 2 FFs/Latches : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_2> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following 2 FFs/Latches : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28> in Unit <microblaze_0> is equivalent to the following 2 FFs/Latches : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_1> <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc_1> 
+INFO:Xst:2260 - The FF/Latch <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg> in Unit <RS232> is equivalent to the following FF/Latch : <RS232/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1> in Unit <axi4lite_0> is equivalent to the following FF/Latch : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1_1> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw> in Unit <axi4lite_0> is equivalent to the following 2 FFs/Latches : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1> <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_2> 
+INFO:Xst:2260 - The FF/Latch <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i> in Unit <axi4lite_0> is equivalent to the following 2 FFs/Latches : <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1> <axi4lite_0/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_31_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_30_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_i_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_29_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28> in Unit <microblaze_0> is equivalent to the following 2 FFs/Latches : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_1> <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_exception_kind_i_28_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_Take_Intr_or_Exc_1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : hz_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2386
+#      GND                         : 12
+#      INV                         : 43
+#      LUT1                        : 36
+#      LUT2                        : 160
+#      LUT3                        : 391
+#      LUT4                        : 303
+#      LUT5                        : 277
+#      LUT6                        : 611
+#      LUT6_2                      : 96
+#      MULT_AND                    : 2
+#      MUXCY                       : 33
+#      MUXCY_L                     : 165
+#      MUXF7                       : 120
+#      VCC                         : 7
+#      XORCY                       : 130
+# FlipFlops/Latches                : 1962
+#      FD                          : 201
+#      FDC                         : 31
+#      FDC_1                       : 5
+#      FDCE                        : 15
+#      FDE                         : 358
+#      FDE_1                       : 8
+#      FDP                         : 5
+#      FDR                         : 645
+#      FDRE                        : 636
+#      FDRE_1                      : 1
+#      FDS                         : 17
+#      FDSE                        : 40
+# RAMS                             : 20
+#      RAM32M                      : 16
+#      RAMB16BWER                  : 4
+# Shift Registers                  : 132
+#      SRL16                       : 1
+#      SRL16E                      : 34
+#      SRLC16E                     : 97
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      IBUFGDS                     : 1
+#      OBUF                        : 1
+# DSPs                             : 3
+#      DSP48A1                     : 3
+# Others                           : 3
+#      AND2B1L                     : 1
+#      BSCAN_SPARTAN6              : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1962  out of  11440    17%  
+ Number of Slice LUTs:                 2113  out of   5720    36%  
+    Number used as Logic:              1917  out of   5720    33%  
+    Number used as Memory:              196  out of   1440    13%  
+       Number used as RAM:               64
+       Number used as SRL:              132
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3301
+   Number with an unused Flip Flop:    1339  out of   3301    40%  
+   Number with an unused LUT:          1188  out of   3301    35%  
+   Number of fully used LUT-FF pairs:   774  out of   3301    23%  
+   Number of unique control sets:       101
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   3  out of    102     2%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of     32    12%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                      3  out of     16    18%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                         | Clock buffer(FF name)                                                                                                  | Load  |
+-------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------+
+CLK_P                                | PLL_ADV:CLKOUT0                                                                                                        | 1865  |
+hz_i/debug_module/debug_module/drck_i| BUFG                                                                                                                   | 209   |
+hz_i/debug_module/Ext_JTAG_UPDATE    | NONE(hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/command_reg_0)| 43    |
+-------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 32.619ns (Maximum Frequency: 30.657MHz)
+   Minimum input arrival time before clock: 7.268ns
+   Maximum output required time after clock: 9.715ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_P'
+  Clock period: 32.619ns (frequency: 30.657MHz)
+  Total number of paths / destination ports: 276459 / 4949
+-------------------------------------------------------------------------
+Delay:               7.829ns (Levels of Logic = 0)
+  Source:            hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Operand_Select_I/EX_Op2_31 (FF)
+  Destination:       hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48A.Normal_in_fabric.DSP48A_I1 (DSP)
+  Source Clock:      CLK_P rising 4.2X
+  Destination Clock: CLK_P rising 4.2X
+
+  Data Path: hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Operand_Select_I/EX_Op2_31 to hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48A.Normal_in_fabric.DSP48A_I1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            48   0.447   1.519  microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/Operand_Select_I/EX_Op2_31 (microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/ex_op2<31>)
+     DSP48A1:B0                5.863          microblaze_0/MicroBlaze_Core_I/Performance.Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48A.Normal_in_fabric.DSP48A_I1
+    ----------------------------------------
+    Total                      7.829ns (6.310ns logic, 1.519ns route)
+                                       (80.6% logic, 19.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hz_i/debug_module/debug_module/drck_i'
+  Clock period: 6.953ns (frequency: 143.817MHz)
+  Total number of paths / destination ports: 345 / 249
+-------------------------------------------------------------------------
+Delay:               3.477ns (Levels of Logic = 11)
+  Source:            hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE (FF)
+  Destination:       hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7 (FF)
+  Source Clock:      hz_i/debug_module/debug_module/drck_i falling
+  Destination Clock: hz_i/debug_module/debug_module/drck_i rising
+
+  Data Path: hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE to hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q           1   0.447   0.924  debug_module/MDM_Core_I1/JTAG_CONTROL_I/SYNC_FDRE (debug_module/MDM_Core_I1/JTAG_CONTROL_I/sync)
+     LUT6:I1->O           17   0.203   1.132  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Mmux_shifting_Data11 (Dbg_Shift_31)
+     end scope: 'hz_i/debug_module:Dbg_Shift_0'
+     begin scope: 'hz_i/microblaze_0:DBG_SHIFT'
+     LUT2:I0->O            1   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_lut<0> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<0> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<1> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<2> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<3> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<4> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<5> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<6> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_xor<7> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count7)
+     FD:D                      0.102          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7
+    ----------------------------------------
+    Total                      3.477ns (1.421ns logic, 2.056ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hz_i/debug_module/Ext_JTAG_UPDATE'
+  Clock period: 9.886ns (frequency: 101.156MHz)
+  Total number of paths / destination ports: 350 / 53
+-------------------------------------------------------------------------
+Delay:               4.943ns (Levels of Logic = 4)
+  Source:            hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination:       hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_TClk (FF)
+  Source Clock:      hz_i/debug_module/Ext_JTAG_UPDATE falling
+  Destination Clock: hz_i/debug_module/Ext_JTAG_UPDATE rising
+
+  Data Path: hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I to hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/force_stop_TClk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           14   0.447   1.062  debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (debug_module/MDM_Core_I1/JTAG_CONTROL_I/data_cmd)
+     LUT2:I0->O            2   0.203   0.961  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Mmux_Dbg_Reg_En_I41 (Dbg_Reg_En_0<3>)
+     end scope: 'hz_i/debug_module:Dbg_Reg_En_0<3>'
+     begin scope: 'hz_i/microblaze_0:DBG_REG_EN<3>'
+     LUT5:I0->O            4   0.203   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o111 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_GND_254_o_PWR_117_o_MUX_5031_o11)
+     LUT4:I3->O           10   0.205   0.856  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En<0>1 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Control_Reg_En)
+     FDCE:CE                   0.322          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/single_Step_TClk
+    ----------------------------------------
+    Total                      4.943ns (1.380ns logic, 3.563ns route)
+                                       (27.9% logic, 72.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_P'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              2.146ns (Levels of Logic = 3)
+  Source:            RESET (PAD)
+  Destination:       hz_i/proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_d1 (FF)
+  Destination Clock: CLK_P rising 4.2X
+
+  Data Path: RESET to hz_i/proc_sys_reset_0/proc_sys_reset_0/EXT_LPF/exr_d1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  RESET_IBUF (RESET_IBUF)
+     begin scope: 'hz_i:RESET'
+     begin scope: 'hz_i/proc_sys_reset_0:Ext_Reset_In'
+     LUT2:I1->O            1   0.205   0.000  proc_sys_reset_0/EXT_LPF/External_System_Reset_MB_Debug_Sys_Rst_OR_8_o1 (proc_sys_reset_0/EXT_LPF/External_System_Reset_MB_Debug_Sys_Rst_OR_8_o)
+     FD:D                      0.102          proc_sys_reset_0/EXT_LPF/exr_d1
+    ----------------------------------------
+    Total                      2.146ns (1.529ns logic, 0.617ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hz_i/debug_module/debug_module/drck_i'
+  Total number of paths / destination ports: 182 / 126
+-------------------------------------------------------------------------
+Offset:              3.185ns (Levels of Logic = 11)
+  Source:            hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:SHIFT (PAD)
+  Destination:       hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7 (FF)
+  Destination Clock: hz_i/debug_module/debug_module/drck_i rising
+
+  Data Path: hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:SHIFT to hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SHIFT    5   0.000   1.079  debug_module/Use_Spartan6.BSCAN_SPARTAN6_I (Ext_JTAG_SHIFT)
+     LUT6:I0->O           17   0.203   1.132  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Mmux_shifting_Data11 (Dbg_Shift_31)
+     end scope: 'hz_i/debug_module:Dbg_Shift_0'
+     begin scope: 'hz_i/microblaze_0:DBG_SHIFT'
+     LUT2:I0->O            1   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_lut<0> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<0> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<1> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<2> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<3> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<4> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<5> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<5>)
+     MUXCY:CI->O           0   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<6> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_cy<6>)
+     XORCY:CI->O           1   0.180   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count_xor<7> (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mcount_shift_count7)
+     FD:D                      0.102          microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_7
+    ----------------------------------------
+    Total                      3.185ns (0.974ns logic, 2.211ns route)
+                                       (30.6% logic, 69.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hz_i/debug_module/Ext_JTAG_UPDATE'
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Offset:              7.268ns (Levels of Logic = 6)
+  Source:            hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:SEL (PAD)
+  Destination:       hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination Clock: hz_i/debug_module/Ext_JTAG_UPDATE falling
+
+  Data Path: hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:SEL to hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_SPARTAN6:SEL     8   0.000   0.907  debug_module/Use_Spartan6.BSCAN_SPARTAN6_I (debug_module/sel)
+     LUT5:I3->O            1   0.203   0.827  debug_module/MDM_Core_I1/JTAG_CONTROL_I/_n01281 (debug_module/MDM_Core_I1/JTAG_CONTROL_I/_n0128)
+     LUT4:I0->O            1   0.203   0.827  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[0].LUT_Delay (debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[0].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[1].LUT_Delay (debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[1].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[2].LUT_Delay (debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[2].local_sel_n)
+     LUT4:I0->O            1   0.203   0.827  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[3].LUT_Delay (debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[3].local_sel_n)
+     LUT4:I0->O            1   0.203   0.579  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].LUT_Delay (debug_module/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[4].local_sel_n)
+     FDC_1:CLR                 0.430          debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I
+    ----------------------------------------
+    Total                      7.268ns (1.648ns logic, 5.620ns route)
+                                       (22.7% logic, 77.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_P'
+  Total number of paths / destination ports: 17 / 3
+-------------------------------------------------------------------------
+Offset:              4.597ns (Levels of Logic = 7)
+  Source:            hz_i/microblaze_0_d_bram_ctrl/microblaze_0_d_bram_ctrl/Sl_Rdy (FF)
+  Destination:       hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1:DI (PAD)
+  Source Clock:      CLK_P rising 4.2X
+
+  Data Path: hz_i/microblaze_0_d_bram_ctrl/microblaze_0_d_bram_ctrl/Sl_Rdy to hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1:DI
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.684  microblaze_0_d_bram_ctrl/Sl_Rdy (microblaze_0_d_bram_ctrl/Sl_Rdy)
+     LUT2:I0->O            4   0.203   0.788  microblaze_0_d_bram_ctrl/Sl_Ready_i1 (Sl_Ready)
+     end scope: 'hz_i/microblaze_0_d_bram_ctrl:Sl_Ready'
+     begin scope: 'hz_i/microblaze_0_dlmb:Sl_Ready<0>'
+     end scope: 'hz_i/microblaze_0_dlmb:LMB_Ready'
+     begin scope: 'hz_i/microblaze_0:DREADY'
+     LUT2:I0->O            1   0.203   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.A_N1 (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.A_N)
+     MUXCY_L:S->LO         1   0.172   0.000  microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready_sel_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.mem_databus_ready)
+     MUXCY_L:CI->LO        1   0.019   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_wait_on_ready_N_carry_or/Using_FPGA.MUXCY_I (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_wait_on_ready_N)
+     MUXCY_L:CI->LO      238   0.019   2.062  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/mem_PipeRun_carry_and/Using_FPGA.MUXCY_I (Trace_MEM_PipeRun)
+    AND2B1L:DI                 0.000          microblaze_0/MicroBlaze_Core_I/Performance.Use_DLMB.Using_Latch_AS_Logic.AND2B1L_I1
+    ----------------------------------------
+    Total                      4.597ns (1.063ns logic, 3.534ns route)
+                                       (23.1% logic, 76.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hz_i/debug_module/Ext_JTAG_UPDATE'
+  Total number of paths / destination ports: 49 / 1
+-------------------------------------------------------------------------
+Offset:              6.767ns (Levels of Logic = 8)
+  Source:            hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (FF)
+  Destination:       hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:TDO (PAD)
+  Source Clock:      hz_i/debug_module/Ext_JTAG_UPDATE falling
+
+  Data Path: hz_i/debug_module/debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I to hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q           14   0.447   1.062  debug_module/MDM_Core_I1/JTAG_CONTROL_I/FDC_I (debug_module/MDM_Core_I1/JTAG_CONTROL_I/data_cmd)
+     LUT2:I0->O            7   0.203   0.774  debug_module/MDM_Core_I1/JTAG_CONTROL_I/Mmux_Dbg_Reg_En_I81 (Dbg_Reg_En_0<7>)
+     end scope: 'hz_i/debug_module:Dbg_Reg_En_0<7>'
+     begin scope: 'hz_i/microblaze_0:DBG_REG_EN<7>'
+     LUT6:I5->O            1   0.205   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1215 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1214)
+     LUT6:I4->O            1   0.203   0.808  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1223 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1222)
+     LUT3:I0->O            1   0.205   0.944  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1224 (DBG_TDO)
+     end scope: 'hz_i/microblaze_0:DBG_TDO'
+     begin scope: 'hz_i/debug_module:Dbg_TDO_0'
+     LUT6:I0->O            1   0.203   0.827  debug_module/MDM_Core_I1/Mmux_TDO_i13 (debug_module/MDM_Core_I1/Mmux_TDO_i12)
+     LUT5:I1->O            0   0.203   0.000  debug_module/MDM_Core_I1/Mmux_TDO_i16 (debug_module/tdo)
+    BSCAN_SPARTAN6:TDO         0.000          debug_module/Use_Spartan6.BSCAN_SPARTAN6_I
+    ----------------------------------------
+    Total                      6.767ns (1.669ns logic, 5.098ns route)
+                                       (24.7% logic, 75.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hz_i/debug_module/debug_module/drck_i'
+  Total number of paths / destination ports: 199 / 1
+-------------------------------------------------------------------------
+Offset:              9.715ns (Levels of Logic = 9)
+  Source:            hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 (FF)
+  Destination:       hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:TDO (PAD)
+  Source Clock:      hz_i/debug_module/debug_module/drck_i rising
+
+  Data Path: hz_i/microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 to hz_i/debug_module/debug_module/Use_Spartan6.BSCAN_SPARTAN6_I:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              30   0.447   1.608  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count_3 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/shift_count<3>)
+     LUT5:I0->O            1   0.203   0.924  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO125 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO124)
+     LUT6:I1->O            1   0.203   0.924  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO126 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO125)
+     LUT6:I1->O            1   0.203   0.924  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO127 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO126)
+     LUT6:I1->O            1   0.203   0.684  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1215 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1214)
+     LUT6:I4->O            1   0.203   0.808  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1223 (microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1222)
+     LUT3:I0->O            1   0.205   0.944  microblaze_0/MicroBlaze_Core_I/Performance.Use_Debug_Logic.Master_Core.Debug_Perf/Mmux_TDO1224 (DBG_TDO)
+     end scope: 'hz_i/microblaze_0:DBG_TDO'
+     begin scope: 'hz_i/debug_module:Dbg_TDO_0'
+     LUT6:I0->O            1   0.203   0.827  debug_module/MDM_Core_I1/Mmux_TDO_i13 (debug_module/MDM_Core_I1/Mmux_TDO_i12)
+     LUT5:I1->O            0   0.203   0.000  debug_module/MDM_Core_I1/Mmux_TDO_i16 (debug_module/tdo)
+    BSCAN_SPARTAN6:TDO         0.000          debug_module/Use_Spartan6.BSCAN_SPARTAN6_I
+    ----------------------------------------
+    Total                      9.715ns (2.073ns logic, 7.642ns route)
+                                       (21.3% logic, 78.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_P
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+CLK_P                                |    7.829|         |         |         |
+hz_i/debug_module/Ext_JTAG_UPDATE    |    3.711|    2.923|         |         |
+hz_i/debug_module/debug_module/drck_i|    4.360|         |         |         |
+-------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hz_i/debug_module/Ext_JTAG_UPDATE
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+CLK_P                                |    2.344|         |         |         |
+hz_i/debug_module/Ext_JTAG_UPDATE    |         |    4.943|    7.982|         |
+hz_i/debug_module/debug_module/drck_i|    1.263|         |         |         |
+-------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hz_i/debug_module/debug_module/drck_i
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+CLK_P                                |    5.158|         |         |         |
+hz_i/debug_module/Ext_JTAG_UPDATE    |         |    4.934|    2.873|         |
+hz_i/debug_module/debug_module/drck_i|    2.427|    3.477|    3.249|         |
+-------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.24 secs
+ 
+--> 
+
+Total memory usage is 293804 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :   31 (   0 filtered)
+

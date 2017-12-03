@@ -1,0 +1,178 @@
+(edif hz_top
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2017 12 3 20 9 41)
+      (program "Xilinx ngc2edif" (version "P.20131013"))
+      (author "Xilinx. Inc ")
+      (comment "This EDIF netlist is to be used within supported synthesis tools")
+      (comment "for determining resource/timing estimates of the design component")
+      (comment "represented by this netlist.")
+      (comment "Command line: -mdp2sp -w -secure hz_top.ngc hz_top.edif ")))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell IBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell OBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library hz_top_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell hz
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port RS232_Uart_1_sin
+              (direction INPUT)
+            )
+            (port RESET
+              (direction INPUT)
+            )
+            (port CLK_P
+              (direction INPUT)
+            )
+            (port CLK_N
+              (direction INPUT)
+            )
+            (port RS232_Uart_1_sout
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell hz_top
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port RS232_Uart_1_sin
+              (direction INPUT)
+            )
+            (port RESET
+              (direction INPUT)
+            )
+            (port CLK_P
+              (direction INPUT)
+            )
+            (port CLK_N
+              (direction INPUT)
+            )
+            (port RS232_Uart_1_sout
+              (direction OUTPUT)
+            )
+            (designator "xc6slx9-3-tqg144")
+            (property TYPE (string "hz_top") (owner "Xilinx"))
+            (property SHREG_MIN_SIZE (string "2") (owner "Xilinx"))
+            (property X_CORE_INFO (string "axi_uartlite_v1_02_a") (owner "Xilinx"))
+            (property SHREG_EXTRACT_NGC (string "YES") (owner "Xilinx"))
+            (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_ALIAS (string "hz_top_hz_top") (owner "Xilinx"))
+          )
+          (contents
+            (instance (rename RS232_Uart_1_sin_IBUF_renamed_0 "RS232_Uart_1_sin_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename RESET_IBUF_renamed_1 "RESET_IBUF")
+              (viewRef view_1 (cellRef IBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance (rename RS232_Uart_1_sout_OBUF_renamed_2 "RS232_Uart_1_sout_OBUF")
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance hz_i
+              (viewRef view_1 (cellRef hz (libraryRef hz_top_lib)))
+            )
+            (net RS232_Uart_1_sin_IBUF
+              (joined
+                (portRef O (instanceRef RS232_Uart_1_sin_IBUF_renamed_0))
+                (portRef RS232_Uart_1_sin (instanceRef hz_i))
+              )
+            )
+            (net RESET_IBUF
+              (joined
+                (portRef O (instanceRef RESET_IBUF_renamed_1))
+                (portRef RESET (instanceRef hz_i))
+              )
+            )
+            (net CLK_P
+              (joined
+                (portRef CLK_P)
+                (portRef CLK_P (instanceRef hz_i))
+              )
+            )
+            (net CLK_N
+              (joined
+                (portRef CLK_N)
+                (portRef CLK_N (instanceRef hz_i))
+              )
+            )
+            (net RS232_Uart_1_sout_OBUF
+              (joined
+                (portRef I (instanceRef RS232_Uart_1_sout_OBUF_renamed_2))
+                (portRef RS232_Uart_1_sout (instanceRef hz_i))
+              )
+            )
+            (net RS232_Uart_1_sin
+              (joined
+                (portRef RS232_Uart_1_sin)
+                (portRef I (instanceRef RS232_Uart_1_sin_IBUF_renamed_0))
+              )
+            )
+            (net RESET
+              (joined
+                (portRef RESET)
+                (portRef I (instanceRef RESET_IBUF_renamed_1))
+              )
+            )
+            (net RS232_Uart_1_sout
+              (joined
+                (portRef RS232_Uart_1_sout)
+                (portRef O (instanceRef RS232_Uart_1_sout_OBUF_renamed_2))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design hz_top
+    (cellRef hz_top
+      (libraryRef hz_top_lib)
+    )
+    (property PART (string "xc6slx9-3-tqg144") (owner "Xilinx"))
+  )
+)
+
